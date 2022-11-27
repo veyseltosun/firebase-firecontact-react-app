@@ -1,9 +1,5 @@
-import React from 'react'
-
-function constant() {
-  return (
-    <div>constant</div>
-  )
-}
-
-export default constant
+export const options = [
+  {key:"m", text:"Male", value:"male" },
+  {key:"f", text:"female", value:"female" },
+  {key:"o", text:"Other", value:"other" },
+]

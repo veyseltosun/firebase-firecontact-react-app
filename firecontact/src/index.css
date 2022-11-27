@@ -22,7 +22,7 @@ code {
   display: flex;
   justify-content: space-evenly;
   min-height: 100vh;
-  /* background-image: url("https://picsum.photos/1600/900"); */
+  background-image: url("https://picsum.photos/1600/900");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
