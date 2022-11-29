@@ -1,21 +1,32 @@
 import { useState } from "react";
 import Contacts from "./components/contacts/Contacts";
 import FormComponent from "./components/form/Form";
-import { addInfo } from "./utils/functions"
+import { addInfo, updateHandler } from "./utils/functions"
  
 const initialState = {username:"", phoneNumber:"", gender:"NO INFO"}
 
 function App() {
   const[info, setInfo]=useState(initialState);
 
-  const handleSubmit = (e) =>{
+  const handleFormSubmit = (e) =>{
     e.preventDefault();
-    addInfo(info)
+    if (info?.id){
+      updateHandler(info)
+    }else{
+      addInfo(info)
+
+    }
+    setInfo(initialState)
+    
+  };
+  const updateFormHandler = (item) => {
+    setInfo({...item})
+
   }
   return (
     <div className="App">
-      <FormComponent handleSubmit={handleSubmit} info={info} setInfo={setInfo}   />
-      <Contacts/>
+      <FormComponent handleFormSubmit={handleFormSubmit} info={info} setInfo={setInfo}   />
+      <Contacts className="contacts" updateFormHandler={updateFormHandler}/>
       
     </div>
   );

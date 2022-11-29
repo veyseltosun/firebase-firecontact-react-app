@@ -5,7 +5,7 @@ import {options} from "../../utils/constant"
 
 
 
-function FormComponent({info, setInfo, handleSubmit }) {
+function FormComponent({info, setInfo, handleFormSubmit }) {
  
   const handleInputChange = (e) =>{
     // const name = e.target.name;
@@ -34,7 +34,7 @@ function FormComponent({info, setInfo, handleSubmit }) {
            </div>
         </div>
         <h2 className='contact-header'>Add Contact</h2>
-        <Form size='large' onSubmit={handleSubmit}>
+        <Form size='large' onSubmit={handleFormSubmit}>
           <Segment stacked>
             <Form.Input
              fluid
@@ -68,7 +68,7 @@ function FormComponent({info, setInfo, handleSubmit }) {
              required
             />
             <Button color='teal' fluid size='large' type='submit'>
-              Add
+              { info.id ? "Update": "Add"}
 
             </Button>
           </Segment>
