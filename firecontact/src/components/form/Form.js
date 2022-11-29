@@ -1,14 +1,12 @@
 import React from 'react'
 import {Button, Form, Grid, Segment} from "semantic-ui-react";
-import {options} from "../utils/constant"
+import {options} from "../../utils/constant"
 
 
 
-function FormComponent({info, setInfo }) {
-  const handleSubmit = () =>{
-    console.log("info:", info)
 
-  }
+function FormComponent({info, setInfo, handleSubmit }) {
+ 
   const handleInputChange = (e) =>{
     // const name = e.target.name;
     // const value = e.targt.value;
