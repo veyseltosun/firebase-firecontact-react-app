@@ -28,7 +28,7 @@ function FormComponent({info, setInfo, handleFormSubmit }) {
              target="_target"
              rel="noopner noreferrer"
              >
-              <code>{"<vys/>"}</code>
+              <code>{"<veyo/>"}</code>
               <span className='design header'>design</span>
             </a>        
            </div>
